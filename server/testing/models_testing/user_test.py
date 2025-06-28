@@ -91,6 +91,7 @@ class TestUser:
             db.session.commit()
 
             user = User(username="Prabhdip")
+            user.password_hash = "somepassword"  # ✅ Fix here
 
             recipe_1 = Recipe(
                 title="Delicious Shed Ham",
